@@ -114,6 +114,12 @@ export default function App() {
             </div>
           )}
 
+          {activeTab === 'journal' && (
+            <div className="w-full max-w-4xl h-[80vh]">
+              <JournalWidget className="h-full" />
+            </div>
+          )}
+
         </div>
       </div>
 

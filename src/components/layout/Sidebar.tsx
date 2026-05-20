@@ -11,7 +11,7 @@ export function Sidebar({ activeTab, setActiveTab }: SidebarProps) {
     { id: 'quests', label: 'Active Quests', icon: <Sword size={18} /> },
     { id: 'projects', label: 'Projects Board', icon: <Map size={18} /> },
     { id: 'stats', label: 'Status & Skills', icon: <Shield size={18} /> },
-    { id: 'history', label: 'Quest History', icon: <Scroll size={18} /> },
+    { id: 'journal', label: 'Grimoire (Journal)', icon: <Scroll size={18} /> },
   ];
 
   return (
@@ -44,7 +44,10 @@ export function Sidebar({ activeTab, setActiveTab }: SidebarProps) {
             <HelpCircle size={16} /> Need Help?
           </div>
           <p className="text-white/70 text-xs mb-3">Upgrade your system or check the latest patch notes.</p>
-          <button className="w-full bg-white text-[#6d28d9] font-bold text-xs py-2 rounded-lg hover:bg-slate-100 transition-colors">
+          <button 
+            onClick={() => window.open('https://github.com/Baniwa/gamified-productivity-app/commits/main', '_blank')}
+            className="w-full bg-white text-[#6d28d9] font-bold text-xs py-2 rounded-lg hover:bg-slate-100 transition-colors"
+          >
             System Update
           </button>
         </div>
