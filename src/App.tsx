@@ -70,12 +70,7 @@ export default function App() {
                 profile={profile}
                 onOpenSettings={() => setIsSettingsOpen(true)}
               />
-              {activeTab === 'dashboard' && (
-                <>
-                  <MarketWidget />
-                  <FocusTimer />
-                </>
-              )}
+              {activeTab === 'dashboard' && <MarketWidget />}
             </div>
           )}
 
@@ -94,7 +89,7 @@ export default function App() {
                 removeQuest={removeQuest}
                 dayOfWeek={dayOfWeek}
               />
-              {activeTab === 'dashboard' && <JournalWidget />}
+              {activeTab === 'dashboard' && <FocusTimer />}
             </div>
           )}
 
@@ -115,6 +110,7 @@ export default function App() {
                 removeProject={removeProject}
                 chartData={chartData}
               />
+              {activeTab === 'dashboard' && <JournalWidget />}
             </div>
           )}
 
